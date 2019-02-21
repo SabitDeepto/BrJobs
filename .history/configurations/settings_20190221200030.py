@@ -152,3 +152,4 @@ CKEDITOR_CONFIGS = {
 
 
 AUTH_USER_MODEL = 'Test.User'
+AUTH_USER_MODEL = 'Test.Profile'

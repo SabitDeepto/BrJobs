@@ -8,8 +8,8 @@ from django.utils.html import escape, mark_safe
 
 
 class User(AbstractUser):
-    is_compnay = models.BooleanField(default=False)
-    is_freelancer = models.BooleanField(default=False)
+    is_student = models.BooleanField(default=False)
+    is_teacher = models.BooleanField(default=False)
 
 
 class Profile(models.Model):
@@ -22,12 +22,12 @@ class Profile(models.Model):
     #     return self.username
 
 
-@receiver(post_save, sender=User)
-def create_user_profile(sender, instance, created, **kwargs):
-    if created:
-        Profile.objects.create(user=instance)
+# @receiver(post_save, sender=User)
+# def create_user_profile(sender, instance, created, **kwargs):
+#     if created:
+#         Profile.objects.create(user=instance)
 
 
-@receiver(post_save, sender=User)
-def save_user_profile(sender, instance, **kwargs):
-    instance.profile.save()
+# @receiver(post_save, sender=User)
+# def save_user_profile(sender, instance, **kwargs):
+#     instance.profile.save()

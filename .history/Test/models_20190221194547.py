@@ -8,8 +8,8 @@ from django.utils.html import escape, mark_safe
 
 
 class User(AbstractUser):
-    is_compnay = models.BooleanField(default=False)
-    is_freelancer = models.BooleanField(default=False)
+    is_student = models.BooleanField(default=False)
+    is_teacher = models.BooleanField(default=False)
 
 
 class Profile(models.Model):
