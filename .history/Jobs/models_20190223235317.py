@@ -13,7 +13,7 @@ class Category(models.Model):
 
 class JobPost(models.Model):
     title = models.CharField(max_length=100, null=True, blank=True)
-    description = RichTextUploadingField(null=True, blank=True)
+    description = RichTextUploadingField()
     location = models.CharField(max_length=150, null=True, blank=True)
     job_type = (
         ('part-time', 'Part Time'),

@@ -16,8 +16,11 @@ def home(request):
 
 
 def single_post(request, post_id):
-	post = JobPost.objects.get(pk=post_id)
-	return render(request, 'basic/detail.html', {'post': post})
+
+    post = JobPost.objects.get(pk=post_id)
+    return render(request, 'basic/detail.html', {
+  'post': post
+})
 
 
 def jobpost(request):
@@ -25,12 +28,4 @@ def jobpost(request):
     if form.is_valid():
         form.save()
         return redirect('home')
-    return render(request, 'basic/client-job.html', {'form': form})
-
-
-def post(request):
-    form = JobPostForm(request.POST, request.FILES)
-    if form.is_valid():
-        form.save()
-        return redirect('home')
-    return render(request, 'basic/test.html', {'form': form})
+    return render(request, 'basic/client-job.html')

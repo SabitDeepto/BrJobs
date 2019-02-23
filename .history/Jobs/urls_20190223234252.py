@@ -5,7 +5,7 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 from django.urls import path
 from django.conf.urls import url
-from Jobs.views import home, jobpost, post, single_post
+from Jobs.views import home, jobpost, post, detail
 
 urlpatterns = [
     path('', home, name='home'),

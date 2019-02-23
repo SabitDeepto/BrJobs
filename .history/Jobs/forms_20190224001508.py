@@ -4,9 +4,11 @@ from .models import JobPost
 
 
 class JobPostForm(forms.ModelForm):
+    description = forms.CharField(widget=CKEditorUploadingWidget())
+
     class Meta:
         model = JobPost
-        fields = ['title', 'description', 'location', 'jobtype', 'category',
+        fields = ['title',  'location', 'jobtype', 'category',
          'post_type', 'apply_url',
          'company_name', 'company_description', 'company_website',
          'company_logo', 'twitter_link',

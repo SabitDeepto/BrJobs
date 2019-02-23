@@ -1,6 +1,7 @@
 from django import forms
+
 from .models import JobPost
-# from ckeditor_uploader.widgets import CKEditorWidget, CKEditorUploadingWidget
+from ckeditor_uploader.widgets import CKEditorWidget, CKEditorUploadingWidget
 
 
 class JobPostForm(forms.ModelForm):

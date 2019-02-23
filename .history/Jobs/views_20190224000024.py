@@ -25,7 +25,7 @@ def jobpost(request):
     if form.is_valid():
         form.save()
         return redirect('home')
-    return render(request, 'basic/client-job.html', {'form': form})
+    return render(request, 'basic/client-job.html')
 
 
 def post(request):
