@@ -22,7 +22,7 @@ def jobpost(request):
 
 
 def post(request):
-    form = JobPostForm(request.POST, request.FILES)
+    form = JobPostForm(request.POST)
     if form.is_valid():
         form.save()
         return redirect('home')
