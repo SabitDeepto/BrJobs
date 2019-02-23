@@ -4,15 +4,14 @@ from django.urls import reverse_lazy
 from django.views import generic
 
 from .forms import JobPostForm
-from .models import JobPost
 
 # from .models import ServicePost
 # from Solution.models import SolutionPost
 
 
 def home(request):
-    post = JobPost.objects.all()
-    return render(request, 'basic/index.html', {'post': post})
+    post =
+    return render(request, 'basic/index.html')
 
 
 def jobpost(request):

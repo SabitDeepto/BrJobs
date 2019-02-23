@@ -12,7 +12,7 @@ from .models import JobPost
 
 def home(request):
     post = JobPost.objects.all()
-    return render(request, 'basic/index.html', {'post': post})
+    return render(request, 'basic/index.html')
 
 
 def jobpost(request):
