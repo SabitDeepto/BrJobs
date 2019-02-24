@@ -47,12 +47,8 @@
     <section>
       <div class="container">
         <div class="row">
-          <div class="col-lg-8">
-            {{post.description | safe }}
-            <div class="job-detail__apply-bottom"><a href="#" class="btn btn-outline-white-primary">Apply for this job</a></div>
-          </div>
+          {{post.description | safe }}
           <div class="col-lg-1"></div>
-
           <div class="col-lg-3">
             <h4>About {{post.company_name}}</h4>
             <p class="job-detail__company-description">{{post.company_description}}</p>
