@@ -1,8 +1,8 @@
 from django import forms
-from .models import JobPost, Profile
-
+from .models import JobPost
+from .models import Profile
 # from .models import User
-from django.contrib.auth.models import User
+
 
 # from ckeditor_uploader.widgets import CKEditorWidget, CKEditorUploadingWidget
 

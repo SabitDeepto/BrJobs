@@ -1,9 +1,6 @@
 from django import forms
 from .models import JobPost, Profile
-
-# from .models import User
 from django.contrib.auth.models import User
-
 # from ckeditor_uploader.widgets import CKEditorWidget, CKEditorUploadingWidget
 
 
@@ -25,6 +22,5 @@ class UserForm(forms.ModelForm):
 
 class ProfileForm(forms.ModelForm):
     class Meta:
-
         model = Profile
-        fields = ('bio', 'location')
+fields = ('bio', 'location')

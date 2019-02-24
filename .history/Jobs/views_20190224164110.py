@@ -42,7 +42,7 @@ def update_profile(request):
     else:
         user_form = UserForm(instance=request.user)
         profile_form = ProfileForm(instance=request.user.profile)
-    return render(request, 'basic/test.html', {
+    return render(request, 'test.html', {
         'user_form': user_form,
         'profile_form': profile_form
 })

@@ -11,9 +11,9 @@ from django.utils.html import escape, mark_safe
 ## User Profile
 
 
-# class User(AbstractUser):
-#     is_compnay = models.BooleanField(default=False)
-#     is_freelancer = models.BooleanField(default=False)
+class User(AbstractUser):
+    is_compnay = models.BooleanField(default=False)
+    is_freelancer = models.BooleanField(default=False)
 
 
 class Profile(models.Model):
@@ -34,7 +34,7 @@ def create_user_profile(sender, instance, created, **kwargs):
 
 @receiver(post_save, sender=User)
 def save_user_profile(sender, instance, **kwargs):
-    instance.profile.save()
+instance.profile.save()
 
 
 ## job purpose

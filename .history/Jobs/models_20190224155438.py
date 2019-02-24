@@ -1,19 +1,9 @@
 from django.db import models
 from django.utils.text import slugify
 from ckeditor_uploader.fields import RichTextUploadingField
-from django.contrib.auth.models import User
-from django.db.models.signals import post_save
-from django.dispatch import receiver
-from django.contrib.auth.models import AbstractUser
-from django.utils.html import escape, mark_safe
 # Create your models here.
 
 ## User Profile
-
-
-# class User(AbstractUser):
-#     is_compnay = models.BooleanField(default=False)
-#     is_freelancer = models.BooleanField(default=False)
 
 
 class Profile(models.Model):
@@ -21,9 +11,6 @@ class Profile(models.Model):
     bio = models.TextField(max_length=500, blank=True)
     location = models.CharField(max_length=30, blank=True)
     birth_date = models.DateField(null=True, blank=True)
-
-    # def __str__(self):
-    #     return self.username
 
 
 @receiver(post_save, sender=User)

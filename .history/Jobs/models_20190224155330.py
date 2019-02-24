@@ -1,19 +1,7 @@
 from django.db import models
 from django.utils.text import slugify
 from ckeditor_uploader.fields import RichTextUploadingField
-from django.contrib.auth.models import User
-from django.db.models.signals import post_save
-from django.dispatch import receiver
-from django.contrib.auth.models import AbstractUser
-from django.utils.html import escape, mark_safe
 # Create your models here.
-
-## User Profile
-
-
-# class User(AbstractUser):
-#     is_compnay = models.BooleanField(default=False)
-#     is_freelancer = models.BooleanField(default=False)
 
 
 class Profile(models.Model):
@@ -36,8 +24,11 @@ def create_user_profile(sender, instance, created, **kwargs):
 def save_user_profile(sender, instance, **kwargs):
     instance.profile.save()
 
+"""""""""""""""
+for Job purpose
+""""""""""""""""
 
-## job purpose
+
 class Category(models.Model):
     name = models.CharField(max_length=100)
 
