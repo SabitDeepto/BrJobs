@@ -52,7 +52,7 @@ def searchposts(request):
         submitbutton = request.GET.get('submit')
 
         if query is not None:
-            lookups = Q(title__icontains=query) | Q(location__icontains=query)
+            lookups = Q(title__icontains=query) . Q(location__icontains=query)
 
             results = JobPost.objects.filter(lookups).distinct()
 

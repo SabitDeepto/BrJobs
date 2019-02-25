@@ -59,10 +59,10 @@ def searchposts(request):
             context = {'results': results,
                      'submitbutton': submitbutton}
 
-            return render(request, 'basic/index.html', context)
+            return render(request, 'test.html', context)
 
         else:
-            return render(request, 'basic/index.html')
+            return render(request, 'test.html')
 
     else:
-        return render(request, 'basic/index.html')
+        return render(request, 'test.html')

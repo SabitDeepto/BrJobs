@@ -52,17 +52,17 @@ def searchposts(request):
         submitbutton = request.GET.get('submit')
 
         if query is not None:
-            lookups = Q(title__icontains=query) | Q(location__icontains=query)
+            lookups = Q(title__icontains=query) | Q(description__icontains=query)
 
             results = JobPost.objects.filter(lookups).distinct()
 
             context = {'results': results,
                      'submitbutton': submitbutton}
 
-            return render(request, 'basic/index.html', context)
+            return render(request, 'test.html', context)
 
         else:
-            return render(request, 'basic/index.html')
+            return render(request, 'test.html')
 
     else:
-        return render(request, 'basic/index.html')
+        return render(request, 'test.html')

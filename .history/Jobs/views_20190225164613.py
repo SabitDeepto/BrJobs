@@ -1,9 +1,15 @@
+from django.contrib.auth.forms import UserCreationForm
 from django.shortcuts import redirect, render
+from django.urls import reverse_lazy
+from django.views import generic
 from .forms import UserForm, ProfileForm
-from .models import JobPost
 from django.contrib import messages
 from django.db.models import Q
+from django.shortcuts import get_object_or_404, render, render_to_response
+
+
 from .forms import JobPostForm
+from .models import JobPost
 
 
 def home(request):
@@ -46,23 +52,22 @@ def update_profile(request):
 
 def searchposts(request):
     if request.method == 'GET':
-
         query = request.GET.get('q')
 
         submitbutton = request.GET.get('submit')
 
         if query is not None:
-            lookups = Q(title__icontains=query) | Q(location__icontains=query)
+            lookups = Q(title__icontains=query) | Q(detail__icontains=query)
 
-            results = JobPost.objects.filter(lookups).distinct()
+            results = Blog.objects.filter(lookups).distinct()
 
             context = {'results': results,
                      'submitbutton': submitbutton}
 
-            return render(request, 'basic/index.html', context)
+            return render(request, 'blog/blog_view.html', context)
 
         else:
-            return render(request, 'basic/index.html')
+            return render(request, 'blog/blog_view.html')
 
     else:
-        return render(request, 'basic/index.html')
+    return render(request, 'blog/blog_view.html')
