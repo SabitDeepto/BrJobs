@@ -47,23 +47,23 @@ def update_profile(request):
 def searchposts(request):
     if request.method == 'GET':
 
-        title = request.GET.get('p')
-        location = request.GET.get('q')
+        query = request.GET.get('p')
+        print(query)
 
         submitbutton = request.GET.get('submit')
 
-        if title is not None and location is not None:
-            lookups = Q(title__icontains=title) & Q(location__icontains=location)
+        if query is not None:
+            lookups = Q(title__icontains=query) | Q(location__icontains=query)
 
             results = JobPost.objects.filter(lookups).distinct()
 
             context = {'results': results,
                      'submitbutton': submitbutton}
 
-            return render(request, 'basic/index.html', context)
+            return render(request, 'test.html', context)
 
         else:
-            return render(request, 'basic/index.html')
+            return render(request, 'test.html')
 
     else:
-        return render(request, 'basic/index.html')
+        return render(request, 'test.html')
