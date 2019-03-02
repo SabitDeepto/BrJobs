@@ -50,7 +50,7 @@
         <div class="row">
           <div class="col-lg-8">
             {{post.description | safe }}
-            <div class="job-detail__apply-bottom"><a  class="btn btn-outline-white-primary">Do you like this job?</a></div>
+            <!-- <div class="job-detail__apply-bottom"><a  class="btn btn-outline-white-primary">Do you like this job?</a></div> -->
           </div>
           <div class="col-lg-1"></div>
 
@@ -62,9 +62,11 @@
                 <i class="fa fa-link"></i> </a><a href="#" data-toggle="tooltip" data-placement="top" title="Twitter" class="twitter">
 
                 <i class="fa fa-twitter"></i> </a><a href="#" data-toggle="tooltip" data-placement="top" title="Facebook" class="facebook"><i class="fa fa-facebook"></i> </a></p>
-            <div class="job-detail__apply-top"><a class="btn btn-outline-white-primary">Apply for this job</a></div>
-            <button type="submit" name="submit"  class="btn btn-outline-white-primary job-main-form__button">Apply</i></button>
+            <!-- <div class="job-detail__apply-top"><a class="btn btn-outline-white-primary">Apply for this job</a></div> -->
+          <form method="POST"> {% csrf_token %}
+            <button type="submit" name="submit"  class="btn btn-outline-white-primary">Apply for this Job</i></button>
           </div>
+        </form>
         </div>
       </div>
       </form>

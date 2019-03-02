@@ -13,6 +13,16 @@ def home(request):
 
 def single_post(request, post_id):
     post = JobPost.objects.get(pk=post_id)
+    jobpost = JobPost.objects.all()
+
+    if request.method == "POST":
+
+        seeker= request.user
+        # print(post.pk)
+        # print(request.user)
+
+        obj = AppliedJob.objects.create(applicant_id=request.user.id, job_id=post.id)
+        obj.save()
 
     return render(request, 'basic/detail.html', {'post': post})
 
@@ -76,9 +86,6 @@ def test(request):
 
 def create_user(request):
     user = request.POST.get('q')
-    # if user:
-    #     x = AppliedJob.objects.create(applicant=user)
-    #     x.save()
-    #     print(x)
+  
 
     return render(request, "test.html", {'user':user})

@@ -79,6 +79,6 @@ class JobPost(models.Model):
 
 
 class AppliedJob(models.Model):
-    applicant = models.ManyToManyField(User)
-    job = models.ForeignKey(JobPost, on_delete=models.CASCADE)
-    total_applied = models.IntegerField(null=True, blank=True)
+    applicant = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)
+    job = models.ForeignKey(JobPost, on_delete=models.CASCADE, null=True, blank=True)
+    
