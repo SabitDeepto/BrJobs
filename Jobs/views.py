@@ -83,9 +83,3 @@ def searchposts(request):
 def test(request):
     return render(request, "test.html")
 
-
-def create_user(request):
-    user = request.POST.get('q')
-  
-
-    return render(request, "test.html", {'user':user})
