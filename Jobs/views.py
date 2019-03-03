@@ -24,7 +24,7 @@ def single_post(request, post_id):
         obj = AppliedJob.objects.create(applicant_id=request.user.id, job_id=post.id)
         obj.save()
 
-    return render(request, 'basic/detail.html', {'post': post})
+    return render(request, 'basic/detail.html', {'post': post, 'obj':obj})
 
 
 def jobpost(request):

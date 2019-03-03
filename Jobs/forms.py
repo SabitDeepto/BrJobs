@@ -15,6 +15,10 @@ class JobPostForm(forms.ModelForm):
          'company_name', 'company_description', 'company_website',
          'company_logo', 'twitter_link',
          ]
+        widgets = {
+            'category': forms.Select(attrs={'class': "form-control select2", 'placeholder': "Choose Category"}),
+        }
+
 
 
 class UserForm(forms.ModelForm):
