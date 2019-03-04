@@ -30,7 +30,9 @@ def single_post(request, post_id):
 def jobpost(request):
     form = JobPostForm(request.POST, request.FILES)
     if form.is_valid():
-        form.save()
+        obj = form.save(commit=False)
+        obj.posted_by = request.user
+        obj.save()
         return redirect('home')
     return render(request, 'basic/client-job.html', {'form': form})
 
