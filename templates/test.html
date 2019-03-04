@@ -1,11 +1,2 @@
-
-
-
-
-
-
-<form action="{% url 'create_user' %}" method="POST">{% csrf_token %}
-  <p name="q"> {{user}} </p>
-    
-    <button type="submit" name="submit" >Apply</i></button>
-</form>
+{{request.user.id}}
+{{request.user.is_authenticated}}
