@@ -70,10 +70,13 @@
               class="facebook"><i class="fa fa-facebook"></i> </a></p>
           <!-- <div class="job-detail__apply-top"><a class="btn btn-outline-white-primary">Apply for this job</a></div> -->
           <form method="POST"> {% csrf_token %}
-             {{request.user}} {{AppliedJob.applicant.id}}
+
+             {{request.user}} |  {{post.posted_by}}
+             {% if request.user.username == post.posted_by %}
             <button type="submit" name="submit" class="btn btn-outline-white-primary">Edit</i></button>  <p></p>
+            {% else %}
             <button type="submit" name="submit" class="btn btn-outline-white-primary">Apply for this Job</i></button> 
-            
+            {% endif %}
         </div>
            </form>
   </div>
