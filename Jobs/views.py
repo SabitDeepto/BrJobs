@@ -85,11 +85,14 @@ def searchposts(request):
         return render(request, 'basic/index.html')
 
 
-def german(request):
-    activate('de')
+def catalan(request):
+    activate('ca')
+    return render(request, "test.html")
+
+def portu(request):
+    activate('pt')
     return render(request, "test.html")
 
 def eng(request):
-    activate('en')
     return render(request, "test.html")
 

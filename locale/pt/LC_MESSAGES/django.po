@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-06 10:47+0600\n"
+"POT-Creation-Date: 2019-03-06 11:37+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,14 +18,26 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: Jobs/views.py:91
-msgid "StatusMsg"
+#: configurations/settings.py:120
+msgid "English"
+msgstr ""
+
+#: configurations/settings.py:121
+msgid "German"
+msgstr ""
+
+#: configurations/settings.py:122
+msgid "Portuguese"
+msgstr ""
+
+#: configurations/settings.py:123
+msgid "Catalan"
 msgstr ""
 
 #: templates/test.html:3
-msgid "WelcomeHeading"
-msgstr "Willkommen auf unserer Seite!"
+msgid "Welcome Heading"
+msgstr "Mensagem de boas-vindas"
 
 #: templates/test.html:4
-msgid "WelcomeMessage"
-msgstr "Hier findet Ihr Umfragen."
+msgid "Welcome Message"
+msgstr "Mensagem de boas-vindas"
