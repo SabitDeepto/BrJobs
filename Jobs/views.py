@@ -4,6 +4,9 @@ from .models import JobPost, AppliedJob
 from django.contrib import messages
 from django.db.models import Q
 from .forms import JobPostForm
+from django.http import HttpResponse
+from django.utils.translation import ugettext as _
+from django.utils.translation import activate
 
 
 def home(request):
@@ -83,5 +86,10 @@ def searchposts(request):
 
 
 def test(request):
+    activate('de')
+    return render(request, "test.html")
+
+def test_2(request):
+    activate('en')
     return render(request, "test.html")
 
