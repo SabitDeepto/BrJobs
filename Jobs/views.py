@@ -85,11 +85,11 @@ def searchposts(request):
         return render(request, 'basic/index.html')
 
 
-def test(request):
+def german(request):
     activate('de')
     return render(request, "test.html")
 
-def test_2(request):
+def eng(request):
     activate('en')
     return render(request, "test.html")
 

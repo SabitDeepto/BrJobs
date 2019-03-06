@@ -4,7 +4,7 @@ from django.contrib.staticfiles.urls import static
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 from django.urls import path
-from Jobs.views import home, jobpost, single_post, update_profile, searchposts, test, test_2
+from Jobs.views import home, jobpost, single_post, update_profile, searchposts, german, eng
 from . import signup
 
 urlpatterns = [
@@ -14,8 +14,8 @@ urlpatterns = [
     path('update_profile', update_profile, name='update_profile'),
     path('search', searchposts, name='searchposts'),
     path('signup/', signup.SignUp.as_view(), name='signup'),
-    path('di/', test, name='test'),
-    path('en/', test_2, name='test2'),
+    path('di/', german, name='test'),
+    path('en/', eng, name='test2'),
 
 
     # path('service/<slug:slug>/', views.single_post_service, name='single_post_service'),
