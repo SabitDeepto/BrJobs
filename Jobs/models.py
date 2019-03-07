@@ -64,6 +64,8 @@ class JobPost(models.Model):
     company_logo = models.ImageField(upload_to="logo", help_text="top left image", null=True, blank=True)
     twitter_link = models.URLField(name=None, null=True, blank=True)
     posted_by = models.CharField(max_length=100, null=True, blank=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
 
     slug = models.SlugField(null=True, blank=True, help_text="Slug will be generated automatically from the title_2 of the post")
 

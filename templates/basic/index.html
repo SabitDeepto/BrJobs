@@ -1,5 +1,6 @@
 {% extends "basic/base.html" %}
 {% load i18n %}
+{% load humanize %}
 {% load staticfiles %}
 
 
@@ -114,24 +115,24 @@
       <div class="container">
         <h4 class="heading">Trending this month</h4>
         
-        {% for x in post %}
+        {% for jobpost in post %}
         <div class="job-listing  ">
           <div class="row">
             <div class="col-md-12 col-lg-6">
               <div class="row">
-                <div class="col-2"><img src="{{x.company_logo.url}}"  class="img-fluid"></div>
+                <div class="col-2"><img src="{{jobpost.company_logo.url}}"  class="img-fluid"></div>
                 <div class="col-10">
-                  <h4 class="job__title"><a href="{% url 'single_post' x.pk %}">{{x.title}}</a></h4>
+                  <h4 class="job__title"><a href="{% url 'single_post' jobpost.pk %}">{{jobpost.title}}</a></h4>
                   <p class="job__company">
 
-                    {{x.company_name}}
+                    {{jobpost.company_name}}
                   </p>
                 </div>
               </div>
             </div>
-            <div class="col-10 col-md-3 col-lg-2 ml-auto"><i class="fa fa-map-marker job__location"></i>{{x.location}}</div>
+            <div class="col-10 col-md-3 col-lg-2 ml-auto"><i class="fa fa-map-marker job__location"></i>{{jobpost.location}}</div>
             <div class="col-10 col-md-3 col-lg-3 ml-auto">
-              <p>Posted 10 days ago</p>
+              <p> Posted {{jobpost.created_at|naturaltime }}</p>
             </div>
             <div class="col-sm-12 col-md-2 col-lg-1">
               <div class="job__star"><a href="#" data-toggle="tooltip" data-placement="top" title="Save to favourites" class="job__star__link"><i class="fa fa-star"></i></a></div>

@@ -27,6 +27,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.humanize',
     'Jobs',
     'ckeditor',
     'ckeditor_uploader',
@@ -108,7 +109,7 @@ DATABASES = {
 
 USE_TZ = True
 # LANGUAGE_CODE = 'en-us'
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Dhaka'
  
 USE_I18N = True
 USE_L10N = False

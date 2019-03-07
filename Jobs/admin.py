@@ -13,6 +13,6 @@ class UserAdmin(admin.ModelAdmin):
 admin.site.register(AppliedJob, UserAdmin)
 
 class JobAdmin(admin.ModelAdmin):
-    list_display = ['title', 'posted_by']
+    list_display = ['title', 'posted_by', 'created_at', 'updated_at']
 
 admin.site.register(JobPost, JobAdmin)
