@@ -28,6 +28,8 @@ def single_post(request, post_id):
         seeker= request.user
         obj = AppliedJob.objects.create(applicant_id=request.user.id, job_id=post.id)
         obj.save()
+        messages.success(request, 'You have applied successfully!', extra_tags='alert')
+        
     return render(request, 'basic/detail.html', {'post': post})
 
 
