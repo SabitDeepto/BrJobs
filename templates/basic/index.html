@@ -43,14 +43,14 @@
                   <div class="row align-items-center">
                     <div class="col-md-5">
                       <div class="form-group">
-                        <label for="profession">Profession</label>
-                        <input name="p" value="{{request.GET.p}}" type="text" id="profession" name="profession" placeholder="Profession you are looking for" class="form-control">
+                        <label for="profession">{% trans 'Profession' %}</label>
+                        <input name="p" value="{{request.GET.p}}" type="text" id="profession" name="profession" placeholder="{% trans 'Profession you are looking for' %}" class="form-control">
                       </div>
                     </div>
                     <div class="col-md-5">
                       <div class="form-group">
-                        <label for="location">Location</label>
-                        <input name="q" value="{{request.GET.q}}" type="text" id="location" name="location" placeholder="Any particular location?" class="form-control">
+                        <label for="location">{% trans 'Location' %}</label>
+                        <input name="q" value="{{request.GET.q}}" type="text" id="location" name="location" placeholder="{% trans 'Any particular location?' %}" class="form-control">
                       </div>
                     </div>
                     <div class="col-md-2">

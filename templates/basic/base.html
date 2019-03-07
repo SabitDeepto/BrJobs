@@ -73,6 +73,18 @@
                      {% else %}
                      <li class="nav-item dropdown"><a href="{% url 'login' %}"  class="btn navbar-btn btn-outline-light mb-5 mb-lg-0"> <i class="fa fa-sign-in"></i>Login</a></li>
                      {% endif %}
+                     <li class="nav-item dropdown">
+                        <a id="clientZone" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle has-img mb-3 mb-lg-0 mt-3 mt-lg-0">
+                           
+                             Language
+                        </a>
+                        <div aria-labelledby="clientZone" class="dropdown-menu">
+                           
+                           <a href="{% url 'pt' %}" class="dropdown-item">Portuguese</a>
+                           <a href="{% url 'home' %}" class="dropdown-item">English</a>
+
+                        </div>
+                     </li>
                   </ul>
                </div>
             </div>

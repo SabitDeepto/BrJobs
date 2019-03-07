@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-07 04:18+0000\n"
+"POT-Creation-Date: 2019-03-07 04:58+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -31,8 +31,24 @@ msgid ""
 "   <h2 class=\"heading\">Find a <span class=\"accent\">job</span> you will "
 "<span class=\"accent\">love</span>.</h2> "
 msgstr ""
-"   <h2 class=\"heading\">Encontre um <span class=\"accent\">emprego</span> que você "
-"<span class=\"accent\"> vai amar</span>.</h2> "
+"   <h2 class=\"heading\">Encontre um <span class=\"accent\">emprego</span> "
+"que você <span class=\"accent\"> vai amar</span>.</h2> "
+
+#: templates/basic/index.html:46
+msgid "Profession"
+msgstr "Profissão"
+
+#: templates/basic/index.html:47
+msgid "Profession you are looking for"
+msgstr "Profissão que você está procurando"
+
+#: templates/basic/index.html:52
+msgid "Location"
+msgstr "Localização"
+
+#: templates/basic/index.html:53
+msgid "Any particular location?"
+msgstr "Qualquer local em particular?"
 
 #: templates/test.html:3
 msgid "Welcome Heading"

@@ -10,9 +10,14 @@ from django.utils.translation import activate
 
 
 def home(request):
+    post = JobPost.objects.all()
+    return render(request, 'basic/index.html', {'post': post})
+
+def home_2(request):
     activate('pt')
     post = JobPost.objects.all()
     return render(request, 'basic/index.html', {'post': post})
+
 
 
 def single_post(request, post_id):
@@ -86,14 +91,5 @@ def searchposts(request):
         return render(request, 'basic/index.html')
 
 
-def catalan(request):
-    activate('ca')
-    return render(request, "test.html")
 
-def portu(request):
-    activate('pt')
-    return render(request, "test.html")
-
-def eng(request):
-    return render(request, "test.html")
 
