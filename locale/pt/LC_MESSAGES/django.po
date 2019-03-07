@@ -31,7 +31,8 @@ msgid ""
 "   <h2 class=\"heading\">Find a <span class=\"accent\">job</span> you will "
 "<span class=\"accent\">love</span>.</h2> "
 msgstr ""
-"Encontre um emprego que você vai amar"
+"   <h2 class=\"heading\">Encontre um <span class=\"accent\">emprego</span> que você "
+"<span class=\"accent\"> vai amar</span>.</h2> "
 
 #: templates/test.html:3
 msgid "Welcome Heading"
