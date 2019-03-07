@@ -10,6 +10,7 @@ from django.utils.translation import activate
 
 
 def home(request):
+    activate('pt')
     post = JobPost.objects.all()
     return render(request, 'basic/index.html', {'post': post})
 

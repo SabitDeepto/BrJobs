@@ -1,5 +1,7 @@
 {% extends "basic/base.html" %}
+{% load i18n %}
 {% load staticfiles %}
+
 
 {% block content %}
     <!-- *** LOGIN MODAL ***_________________________________________________________
@@ -35,7 +37,7 @@
         <div class="row">
           <div class="col-lg-8 mx-auto">
             <div class="job-form-box">
-              <h2 class="heading">Find a <span class="accent">job</span> you will <span class="accent">love</span>.</h2>
+              {% blocktrans %}   <h2 class="heading">Find a <span class="accent">job</span> you will <span class="accent">love</span>.</h2> {% endblocktrans %}
               <form id="job-main-form" method="GET" action="{% url 'searchposts' %}" class="job-main-form">
                 <div class="controls">
                   <div class="row align-items-center">

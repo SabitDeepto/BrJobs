@@ -115,13 +115,12 @@ USE_L10N = False
 USE_TZ = True
 # LANGUAGE_CODE = 'de'
 LANGUAGE_CODE = 'en-us'
-LANGUAGE_CODE = 'pt'
+# LANGUAGE_CODE = 'pt'
  
 LANGUAGES = (
     ('en-us', _('English')),
-    ('de', _('German')),
     ( 'pt', _('Portuguese')),
-    ('ca', _('Catalan')),
+
 )
 
 LOCALE_PATHS = (

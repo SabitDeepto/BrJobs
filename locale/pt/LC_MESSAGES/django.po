@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-06 11:37+0000\n"
+"POT-Creation-Date: 2019-03-07 04:18+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,26 +18,49 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: configurations/settings.py:120
-msgid "English"
-msgstr ""
-
 #: configurations/settings.py:121
-msgid "German"
+msgid "English"
 msgstr ""
 
 #: configurations/settings.py:122
 msgid "Portuguese"
 msgstr ""
 
-#: configurations/settings.py:123
-msgid "Catalan"
+#: templates/basic/index.html:40
+msgid ""
+"   <h2 class=\"heading\">Find a <span class=\"accent\">job</span> you will "
+"<span class=\"accent\">love</span>.</h2> "
 msgstr ""
+"Encontre um emprego que você vai amar"
 
 #: templates/test.html:3
 msgid "Welcome Heading"
-msgstr "Mensagem de boas-vindas"
+msgstr "Mensagens de Boas-vindas"
 
 #: templates/test.html:4
 msgid "Welcome Message"
-msgstr "Mensagem de boas-vindas"
+msgstr ""
+"Seja bem-vindo, colega! Esperamos que esta se torne na sua casa por muitos "
+"anos e que encontre em todos nós uma segunda família."
+
+#: templates/test.html:6
+msgid "hello world"
+msgstr "alcançar muito sucesso. Suas qualidades e capacidades vão "
+
+#: templates/test.html:8
+msgid "welcome"
+msgstr "স্বাগতম"
+
+#: templates/test.html:10
+msgid "welcome deepto"
+msgstr "স্বাগতম দীপ্ত"
+
+#: templates/test.html:12
+msgid "Find a job you will love"
+msgstr ""
+
+#: templates/test.html:14
+msgid ""
+"\n"
+"Find a love you will job \n"
+msgstr ""
