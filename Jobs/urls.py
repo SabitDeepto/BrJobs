@@ -2,10 +2,12 @@
 from configurations import settings
 from django.contrib.staticfiles.urls import static
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+from django.conf.urls.i18n import i18n_patterns
 
 from django.urls import path
 from Jobs.views import home, jobpost, single_post, update_profile, searchposts
 from . import signup
+prefix_default_language= False,
 
 urlpatterns = [
     path('', home, name='home'),
@@ -15,10 +17,5 @@ urlpatterns = [
     path('search', searchposts, name='searchposts'),
     path('signup/', signup.SignUp.as_view(), name='signup'),
     
-
-
-    # path('service/<slug:slug>/', views.single_post_service, name='single_post_service'),
-    # path('solution/<slug:slug>/', views.single_post_solution, name='single_post_solution'),
-    # path('services', views.services, name='services'),
 
 ]+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)+staticfiles_urlpatterns()
