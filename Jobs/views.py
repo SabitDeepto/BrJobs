@@ -12,13 +12,11 @@ from django.utils.translation import activate
 def home(request):
     post = JobPost.objects.all()
     featured_post = JobPost.objects.filter(post_type="featured").order_by('-id')
+    if "pt" in request.POST:
+        activate("pt")
+    elif "en" in request.POST:
+        activate("en")
     return render(request, 'basic/index.html', {'post': post, 'featured_post':featured_post})
-
-def home_2(request):
-    activate('pt')
-    post = JobPost.objects.all()
-    return render(request, 'basic/index.html', {'post': post})
-
 
 
 def single_post(request, post_id):

@@ -105,16 +105,12 @@ DATABASES = {
 
 
 USE_TZ = True
-# LANGUAGE_CODE = 'en-us'
-TIME_ZONE = 'Asia/Dhaka'
- 
+LANGUAGE_CODE = 'en-us'
+TIME_ZONE = 'Asia/Dhaka' 
 USE_I18N = True
 USE_L10N = False
-USE_TZ = True
-# LANGUAGE_CODE = 'de'
-LANGUAGE_CODE = 'en-us'
-# LANGUAGE_CODE = 'pt'
- 
+
+
 LANGUAGES = (
     ('en-us', _('English')),
     ( 'pt', _('Portuguese')),

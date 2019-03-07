@@ -18,5 +18,6 @@ if settings.DEBUG:
     ]
     urlpatterns += i18n_patterns(
     path('', include('Jobs.urls')),
+    prefix_default_language= False,
     
 )
