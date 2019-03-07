@@ -55,13 +55,14 @@ class JobPost(models.Model):
 
     )
     post_type = models.CharField(choices=post_type, max_length=200)
+    featured_post_image = models.ImageField(upload_to="logo", help_text="Add Image if this is a featured post ", null=True, blank=True)
     apply_url = models.URLField(name=None, null=True, blank=True)
     # validity = models.DateTimeField(auto_now_add=True)
 
     company_name = models.CharField(max_length=100, null=True, blank=True)
     company_description = models.TextField(null=True, blank=True)
     company_website = models.URLField(name=None, null=True, blank=True)
-    company_logo = models.ImageField(upload_to="logo", help_text="top left image", null=True, blank=True)
+    company_logo = models.ImageField(upload_to="logo", help_text="Your Company Logo", null=True, blank=True)
     twitter_link = models.URLField(name=None, null=True, blank=True)
     posted_by = models.CharField(max_length=100, null=True, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)

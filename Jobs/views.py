@@ -11,7 +11,8 @@ from django.utils.translation import activate
 
 def home(request):
     post = JobPost.objects.all()
-    return render(request, 'basic/index.html', {'post': post})
+    featured_post = JobPost.objects.filter(post_type="featured").order_by('-id')
+    return render(request, 'basic/index.html', {'post': post, 'featured_post':featured_post})
 
 def home_2(request):
     activate('pt')
@@ -23,16 +24,10 @@ def home_2(request):
 def single_post(request, post_id):
     post = JobPost.objects.get(pk=post_id)
     jobpost = JobPost.objects.all()
-
     if request.method == "POST":
-
         seeker= request.user
-        # print(post.pk)
-        # print(request.user)
-
         obj = AppliedJob.objects.create(applicant_id=request.user.id, job_id=post.id)
         obj.save()
-
     return render(request, 'basic/detail.html', {'post': post})
 
 

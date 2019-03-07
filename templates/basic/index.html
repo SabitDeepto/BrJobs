@@ -69,51 +69,27 @@
       <div class="container">
         <h3 class="heading">Featured jobs</h3>
         <div class="row featured align-items-stretch">
+          {% for featured_post in featured_post %}
           <div class="col-lg-4 mb-5 mb-lg-0">
             <div class="box-image-text bg-visible full-height">
               <div class="top"><a href="detail.html">
-                  <div class="image"><img src="{% static 'img/featured1.jpg' %}" alt="" class="img-fluid"></div>
+                  <div class="image"><img src="{{featured_post.featured_post_image.url}}" height="600" width="350" alt="" class="img-fluid"></div>
                   <div class="bg"></div>
-                  <div class="logo"><img src="{% static 'img/companypng' %}" alt="" style="max-width: 80px;"></div></a></div>
+                  <div class="logo"><img src="{{featured_post.company_logo.url}}" alt="" style="max-width: 80px;"></div></a></div>
               <div class="content">
-                <h5><a href="detail.html">Software Engineer</a></h5>
-                <p class="featured__details">  <i class="fa fa-map-marker job__location"></i>San Francisco<span class="badge featured-badge badge-success">Full Time</span></p>
+                <h5><a href="detail.html">{{featured_post.title}}</a></h5>
+                <p class="featured__details">  <i class="fa fa-map-marker job__location"></i>{{featured_post.location}}<span class="badge featured-badge badge-success">{{featured_post.jobtype}}</span></p>
                 <p>Advantage old had otherwise sincerity dependent additions. It in adapted natural hastily is justice. Six draw you him full not mean evil. Prepare garrets it expense windows shewing do an.</p>
               </div>
             </div>
           </div>
-          <div class="col-lg-4 mb-5 mb-lg-0">
-            <div class="box-image-text bg-visible full-height">
-              <div class="top"><a href="detail.html">
-                  <div class="image"><img src="{% static 'img/featured2.jpg' %}" alt="" class="img-fluid"></div>
-                  <div class="bg"></div>
-                  <div class="logo"><img src="{% static 'img/company-3.png' %}" alt="" style="max-width: 80px;"></div></a></div>
-              <div class="content">
-                <h5><a href="detail.html">Customer support</a></h5>
-                <p class="featured__details">  <i class="fa fa-map-marker job__location"></i>Palo Alto<span class="badge featured-badge badge-success">Full Time</span></p>
-                <p>Am terminated it excellence invitation projection as. She graceful shy believed distance use nay. Lively is people so basket ladies window expect. </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 mb-5 mb-lg-0">
-            <div class="box-image-text bg-visible full-height">
-              <div class="top"><a href="detail.html">
-                  <div class="image"><img src="{% static '' %}img/featured3.jpg" alt="" class="img-fluid"></div>
-                  <div class="bg"></div>
-                  <div class="logo"><img src="{% static '' %}img/company-2.png" alt="" style="max-width: 80px;"></div></a></div>
-              <div class="content">
-                <h5><a href="detail.html">Graphic designer</a></h5>
-                <p class="featured__details">  <i class="fa fa-map-marker job__location"></i>San Francisco<span class="badge featured-badge badge-dark">Part Time</span></p>
-                <p>Fifth abundantly made Give sixth hath. Cattle creature i be dont them behold green moved fowl Moved life us beast good yielding. Have bring.</p>
-              </div>
-            </div>
-          </div>
+         {% endfor %}
         </div>
       </div>
     </section>
    <section>  
       <div class="container">
-        <h4 class="heading">Trending this month</h4>
+        <h4 class="heading">Trending Jobs</h4>
         
         {% for jobpost in post %}
         <div class="job-listing  ">
