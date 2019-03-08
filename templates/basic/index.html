@@ -72,12 +72,12 @@
           {% for featured_post in featured_post %}
           <div class="col-lg-4 mb-5 mb-lg-0">
             <div class="box-image-text bg-visible full-height">
-              <div class="top"><a href="#">
+              <div class="top"><a href="{% url 'single_post' featured_post.slug %}">
                   <div class="image"><img src="{{featured_post.featured_post_image.url}}" height="600" width="350" alt="" class="img-fluid"></div>
                   <div class="bg"></div>
                   <div class="logo"><img src="{{featured_post.company_logo.url}}" alt="" style="max-width: 80px;"></div></a></div>
               <div class="content">
-                <h5><a href="#">{{featured_post.title}}</a></h5>
+                <h5><a href="{% url 'single_post' featured_post.slug %}">{{featured_post.title}}</a></h5>
                 <p class="featured__details">  <i class="fa fa-map-marker job__location"></i>{{featured_post.location}}<span class="badge featured-badge badge-success">{{featured_post.jobtype}}</span></p>
                 <p>Advantage old had otherwise sincerity dependent additions. It in adapted natural hastily is justice. Six draw you him full not mean evil. Prepare garrets it expense windows shewing do an.</p>
               </div>

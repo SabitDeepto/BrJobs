@@ -44,10 +44,7 @@
                   <ul class="navbar-nav ml-auto">
                      <li class="nav-item active"><a href="category.html" class="nav-link">Jobs <span class="sr-only">(current)</span></a></li>
                      <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
-                     <li class="nav-item dropdown">
-                        <a id="clientZone" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle">Client Zone</a>
-                        <div aria-labelledby="clientZone" class="dropdown-menu"><a href="client-register.html" class="dropdown-item">Login or Register</a><a href="client-dashboard.html" class="dropdown-item">Dashboard</a><a href="client-applicants.html" class="dropdown-item">Applicants                </a><a href="client-job.html" class="dropdown-item">Post a new job  </a></div>
-                     </li>
+                     
                      <li class="nav-item dropdown">
                         <a id="pages" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle">Pages</a>
                         <div aria-labelledby="pages" class="dropdown-menu"><a href="index.html" class="dropdown-item">Home</a><a href="category.html" class="dropdown-item">Job Listing</a><a href="detail.html" class="dropdown-item">Job Detail                </a><a href="about.html" class="dropdown-item">About                </a><a href="contact.html" class="dropdown-item">Contact                </a><a href="blog.html" class="dropdown-item">Blog Listing                </a><a href="post.html" class="dropdown-item">Blog Post                </a><a href="packages.html" class="dropdown-item">Pricing packages    </a><a href="testimonials.html" class="dropdown-item">Testimonials    </a><a href="text.html" class="dropdown-item">Text Page    </a><a href="faq.html" class="dropdown-item">FAQ</a></div>
@@ -61,7 +58,14 @@
                            </div>
                              {{user.username}}
                         </a>
-                       
+                        <div aria-labelledby="clientZone" class="dropdown-menu">
+                           
+                           <a href="{% url 'update_profile' %}" class="dropdown-item">Update Profile</a>
+                           <a href="client-dashboard.html" class="dropdown-item">Dashboard</a>
+                           <a href="client-applicants.html" class="dropdown-item">Applicants</a>
+                           <a href="{% url 'jobpost' %}" class="dropdown-item">Post a new job  </a>
+                           <a href="{% url 'logout' %}" class="dropdown-item">Logout </a>
+                        </div>
                      </li>
                      {% else %}
                      <li class="nav-item dropdown"><a href="{% url 'login' %}"  class="btn navbar-btn btn-outline-light mb-5 mb-lg-0"> <i class="fa fa-sign-in"></i>Login</a></li>

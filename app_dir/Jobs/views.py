@@ -21,15 +21,15 @@ def home(request):
 
 def single_post(request, slug):
     post = JobPost.objects.get(slug=slug)
+    featured_post = JobPost.objects.filter(post_type="featured").order_by('-created_at')
     jobpost = JobPost.objects.all()
-    featured_post = JobPost.objects.filter(post_type="featured").order_by('-id')
     if request.method == "POST":
         seeker= request.user
         obj = AppliedJob.objects.create(applicant_id=request.user.id, job_id=post.id)
         obj.save()
         messages.success(request, 'You have applied successfully!', extra_tags='alert')
         
-    return render(request, 'basic/detail.html', {'post': post})
+    return render(request, 'basic/detail.html', {'post': post, 'featured_post':featured_post})
 
 
 def jobpost(request):
