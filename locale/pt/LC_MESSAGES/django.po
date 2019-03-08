@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-07 04:58+0000\n"
+"POT-Creation-Date: 2019-03-08 16:50+0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,15 +18,55 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: configurations/settings.py:121
+#: configurations/settings.py:115 templates/basic/base.html:86
 msgid "English"
-msgstr ""
+msgstr "Inglês"
 
-#: configurations/settings.py:122
+#: configurations/settings.py:116 templates/basic/base.html:85
 msgid "Portuguese"
-msgstr ""
+msgstr "Português"
 
-#: templates/basic/index.html:40
+#: templates/basic/base.html:50
+msgid "Jobs"
+msgstr "Empregos"
+
+#: templates/basic/base.html:51
+msgid "About Us"
+msgstr "Sobre nós"
+
+#: templates/basic/base.html:54
+msgid "Pages"
+msgstr "Páginas"
+
+#: templates/basic/base.html:56
+msgid "Contact"
+msgstr "Contato"
+
+#: templates/basic/base.html:67
+msgid "Update Profile"
+msgstr "Atualizar perfil"
+
+#: templates/basic/base.html:68
+msgid "Dashboard"
+msgstr "Painel de controle"
+
+#: templates/basic/base.html:69
+msgid "Applicants"
+msgstr "Candidatos"
+
+#: templates/basic/base.html:70
+msgid "Post a new job"
+msgstr "Postar um novo emprego"
+
+#: templates/basic/base.html:71
+msgid "Logout"
+msgstr "Sair"
+
+#: templates/basic/base.html:80
+msgid "Language"
+msgstr "Língua"
+
+#: templates/basic/index.html:41
 msgid ""
 "   <h2 class=\"heading\">Find a <span class=\"accent\">job</span> you will "
 "<span class=\"accent\">love</span>.</h2> "
@@ -34,50 +74,18 @@ msgstr ""
 "   <h2 class=\"heading\">Encontre um <span class=\"accent\">emprego</span> "
 "que você <span class=\"accent\"> vai amar</span>.</h2> "
 
-#: templates/basic/index.html:46
+#: templates/basic/index.html:47
 msgid "Profession"
 msgstr "Profissão"
 
-#: templates/basic/index.html:47
+#: templates/basic/index.html:48
 msgid "Profession you are looking for"
 msgstr "Profissão que você está procurando"
 
-#: templates/basic/index.html:52
+#: templates/basic/index.html:53
 msgid "Location"
 msgstr "Localização"
 
-#: templates/basic/index.html:53
+#: templates/basic/index.html:54
 msgid "Any particular location?"
 msgstr "Qualquer local em particular?"
-
-#: templates/test.html:3
-msgid "Welcome Heading"
-msgstr "Mensagens de Boas-vindas"
-
-#: templates/test.html:4
-msgid "Welcome Message"
-msgstr ""
-"Seja bem-vindo, colega! Esperamos que esta se torne na sua casa por muitos "
-"anos e que encontre em todos nós uma segunda família."
-
-#: templates/test.html:6
-msgid "hello world"
-msgstr "alcançar muito sucesso. Suas qualidades e capacidades vão "
-
-#: templates/test.html:8
-msgid "welcome"
-msgstr "স্বাগতম"
-
-#: templates/test.html:10
-msgid "welcome deepto"
-msgstr "স্বাগতম দীপ্ত"
-
-#: templates/test.html:12
-msgid "Find a job you will love"
-msgstr ""
-
-#: templates/test.html:14
-msgid ""
-"\n"
-"Find a love you will job \n"
-msgstr ""

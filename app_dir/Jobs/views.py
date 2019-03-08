@@ -15,20 +15,25 @@ def home(request):
     if "pt" in request.POST:
         activate("pt")
     elif "en" in request.POST:
-        activate("en")
+        activate('en')  
     return render(request, 'basic/index.html', {'post': post, 'featured_post':featured_post})
 
 
 def single_post(request, slug):
+    if "pt" in request.POST:
+        activate("pt")
+    elif "en" in request.POST:
+        activate('en')
     post = JobPost.objects.get(slug=slug)
     featured_post = JobPost.objects.filter(post_type="featured").order_by('-created_at')
     jobpost = JobPost.objects.all()
+    
     if request.method == "POST":
         seeker= request.user
         obj = AppliedJob.objects.create(applicant_id=request.user.id, job_id=post.id)
         obj.save()
-        messages.success(request, 'You have applied successfully!', extra_tags='alert')
-        
+        if 'submit' in request.POST:
+            messages.success(request, 'You have applied successfully!', extra_tags='alert')
     return render(request, 'basic/detail.html', {'post': post, 'featured_post':featured_post})
 
 
