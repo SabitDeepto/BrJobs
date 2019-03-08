@@ -24,7 +24,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.humanize',
-    'Jobs',
+    'app_dir.Jobs',
     'ckeditor',
     'ckeditor_uploader',
     'debug_toolbar',

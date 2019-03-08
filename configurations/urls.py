@@ -11,13 +11,13 @@ if settings.DEBUG:
         path('__debug__/', include(debug_toolbar.urls)),
         path('admin/', admin.site.urls),
         path('accounts/', include('django.contrib.auth.urls')),
-        path('', include('Jobs.urls')),
+        path('', include('app_dir.Jobs.urls')),
         path('ckeditor', include('ckeditor_uploader.urls')),
 
 
     ]
     urlpatterns += i18n_patterns(
-    path('', include('Jobs.urls')),
+    path('', include('app_dir.Jobs.urls')),
     prefix_default_language= False,
     
 )
