@@ -91,6 +91,16 @@ def searchposts(request):
     else:
         return render(request, 'basic/index.html')
 
+def about(request):
+    if "pt" in request.POST:
+        activate("pt")
+    elif "en" in request.POST:
+        activate('en')
+    return render(request, 'basic/about.html')
 
-
-
+def contact(request):
+    if "pt" in request.POST:
+        activate("pt")
+    elif "en" in request.POST:
+        activate('en')
+    return render(request, 'basic/contact.html')
