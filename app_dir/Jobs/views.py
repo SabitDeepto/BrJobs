@@ -11,7 +11,7 @@ from django.utils.translation import activate
 
 def home(request):
     post = JobPost.objects.all()
-    featured_post = JobPost.objects.filter(post_type="featured").order_by('-id')
+    featured_post = JobPost.objects.filter(post_type="featured").order_by('-created_at')
     if "pt" in request.POST:
         activate("pt")
     elif "en" in request.POST:
@@ -19,9 +19,10 @@ def home(request):
     return render(request, 'basic/index.html', {'post': post, 'featured_post':featured_post})
 
 
-def single_post(request, post_id):
-    post = JobPost.objects.get(pk=post_id)
+def single_post(request, slug):
+    post = JobPost.objects.get(slug=slug)
     jobpost = JobPost.objects.all()
+    featured_post = JobPost.objects.filter(post_type="featured").order_by('-id')
     if request.method == "POST":
         seeker= request.user
         obj = AppliedJob.objects.create(applicant_id=request.user.id, job_id=post.id)

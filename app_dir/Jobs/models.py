@@ -6,6 +6,7 @@ from django.db.models.signals import post_save
 from django.dispatch import receiver
 from django.contrib.auth.models import AbstractUser
 from django.utils.html import escape, mark_safe
+from django.utils.text import slugify
 # Create your models here.
 
 
@@ -68,7 +69,7 @@ class JobPost(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
-    slug = models.SlugField(null=True, blank=True, help_text="Slug will be generated automatically from the title_2 of the post")
+    slug = models.SlugField(null=True, blank=True, help_text="Slug will be generated automatically from the title of the post")
 
     class Meta:
         verbose_name_plural = 'Job Post'

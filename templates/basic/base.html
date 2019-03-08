@@ -61,14 +61,7 @@
                            </div>
                              {{user.username}}
                         </a>
-                        <div aria-labelledby="clientZone" class="dropdown-menu">
-                           
-                           <a href="{% url 'update_profile' %}" class="dropdown-item">Update Profile</a>
-                           <a href="client-dashboard.html" class="dropdown-item">Dashboard</a>
-                           <a href="client-applicants.html" class="dropdown-item">Applicants</a>
-                           <a href="{% url 'jobpost' %}" class="dropdown-item">Post a new job  </a>
-                           <a href="{% url 'logout' %}" class="dropdown-item">Logout </a>
-                        </div>
+                       
                      </li>
                      {% else %}
                      <li class="nav-item dropdown"><a href="{% url 'login' %}"  class="btn navbar-btn btn-outline-light mb-5 mb-lg-0"> <i class="fa fa-sign-in"></i>Login</a></li>

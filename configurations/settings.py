@@ -167,9 +167,5 @@ CKEDITOR_CONFIGS = {
 
 ###################################
 
-# AUTH_USER_MODEL = 'Test.User'
-# AUTH_USER_MODEL = 'TestApp.User'
-
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
-# AUTH_USER_MODEL = 'Jobs.User'
