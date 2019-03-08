@@ -16,8 +16,11 @@ class Profile(models.Model):
     location = models.CharField(max_length=30, blank=True)
     profile_picture = models.ImageField(upload_to="Profile_Picture", help_text="Your Profile Picture", null=True, blank=True)
 
-    # def __str__(self):
-    #     return self.username
+    class Meta:
+        verbose_name_plural = 'User Profile'
+
+    def __str__(self):
+        return self.user.username
 
 
 @receiver(post_save, sender=User)
@@ -37,6 +40,8 @@ class Category(models.Model):
 
     def __str__(self):
         return self.name
+    class Meta:
+        verbose_name_plural = 'Job Category'
 
 
 class JobPost(models.Model):
