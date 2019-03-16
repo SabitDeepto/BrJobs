@@ -31,7 +31,21 @@
       <link rel="stylesheet" href="{% static 'register/style.css' %}">
 
       {% load i18n %}
-
+      <style>
+            .zoom {
+                  padding: 4px;
+                  transition: transform .5s;
+                  width: 300px;
+                  height: 100px;
+                  margin: 0 auto;
+               }
+            
+            .zoom:hover {
+              -ms-transform: scale(1.2); /* IE 9 */
+              -webkit-transform: scale(1.2); /* Safari 3-8 */
+              transform: scale(1.2); 
+            }
+      </style>
 
 
       <!-- Tweaks for older IEs--><!--[if lt IE 9]>
@@ -43,7 +57,7 @@
       <header class="header">
          <nav class="navbar navbar-expand-lg">
             <div class="container">
-               <a href="{% url 'home' %}" class="navbar-brand"><img src="{% static 'img/test.png' %}" height = "100px" width="220px" alt="logo" class="d-none d-lg-block"><img src="{% static 'img/brjobslogo1.png' %}" height = "100px" width="220px" alt="logo" class="d-block d-lg-none"><span class="sr-only">Go to homepage</span></a>
+               <a href="{% url 'home' %}" class="navbar-brand"><img src="{% static 'img/logo1.png' %}" height = "70px" width="220px" alt="logo" class="d-none d-lg-block"><img src="{% static 'img/logo1.png' %}" height = "100px" width="220px" alt="logo" class="d-block d-lg-none"><span class="sr-only">Go to homepage</span></a>
                <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler navbar-toggler-right">Menu<i class="fa fa-bars"></i></button>
                <div id="navbarSupportedContent" class="collapse navbar-collapse">
                   <ul class="navbar-nav ml-auto">
