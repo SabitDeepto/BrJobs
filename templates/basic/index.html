@@ -92,24 +92,32 @@
     <!-- Hot Jobs -->
     <section>  
         <div class="container">
-          <h4 class="heading">Hot Jobs</h4>
+         
+          
+              <table >
+              <!-- <tr><img src="/static/img/fire.png" height="35px" width="80" ></tr> -->
+               <tr><h4 class="heading " >Hot Jobs</h4></tr>
+              </table>
+           
+          
+          
           <div class="row">
+
+              {% for jobpost in post %}
               <div class="card zoom col-sm-3">
-                  <div class="card-body ">
+                  <div class="card-body  ">
                     <div class="row">
-                        <img src="/static/img/company-3.png" height="25px" width="60" hspace="8" class="img-fluid">
+                        <img src="{{jobpost.company_logo.url}}" height="25px" width="60"  class="img-fluid">
                       <div class="col-sm">
-                          <h4 class="job__title"><a href="#">Bashundhara Group</a></h4>
+                          <h4 class="job__title"><a href="{% url 'single_post' jobpost.slug %}"> {{jobpost.company_name}}</a></h4>
                           <p class="job__company">
-                              Web Developer
+                              {{jobpost.title}}
                             </p>
-                          <div class="col-sm">
-                              
-                          </div>
                       </div>   
                     </div>
                   </div>
-              </div>
+              </div><p></p>
+              {% endfor %}
           </div>
           
         </div>
